@@ -1,0 +1,108 @@
+{
+	"ABI version": 2,
+	"version": "2.1",
+	"header": ["time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "addTask",
+			"inputs": [
+				{"name":"value","type":"string"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "countOpenTask",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"int8"}
+			]
+		},
+		{
+			"name": "returnListTask",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"string[]"}
+			]
+		},
+		{
+			"name": "getTask",
+			"inputs": [
+				{"name":"value","type":"int8"}
+			],
+			"outputs": [
+				{"components":[{"name":"caseName","type":"string"},{"name":"timeAdd","type":"uint32"},{"name":"done","type":"bool"}],"name":"value0","type":"tuple"}
+			]
+		},
+		{
+			"name": "delTask",
+			"inputs": [
+				{"name":"value","type":"int8"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "checkTask",
+			"inputs": [
+				{"name":"value","type":"int8"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "timestamp",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"timestamp","type":"uint32"}
+			]
+		},
+		{
+			"name": "numDelTasks",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"numDelTasks","type":"int8[]"}
+			]
+		},
+		{
+			"name": "countTask",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"countTask","type":"int8"}
+			]
+		},
+		{
+			"name": "lstTasks",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"name":"caseName","type":"string"},{"name":"timeAdd","type":"uint32"},{"name":"done","type":"bool"}],"name":"lstTasks","type":"map(int8,tuple)"}
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"timestamp","type":"uint32"},
+		{"name":"numDelTasks","type":"int8[]"},
+		{"name":"countTask","type":"int8"},
+		{"components":[{"name":"caseName","type":"string"},{"name":"timeAdd","type":"uint32"},{"name":"done","type":"bool"}],"name":"lstTasks","type":"map(int8,tuple)"}
+	]
+}
